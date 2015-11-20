@@ -25,13 +25,13 @@ public class MyLinkedList<T> implements Collection<T>, Iterable<T> {
 		return size;
 	}
 	
-	//Iterator用于定义统一的遍历方式
+	//Iterator用于定义统一的遍历方式，遍历时不止设计一个方式，因此使用接口来管理
 	@Override
 	public Iterator<T> iterator() {
-		return new MyLinkedListIterator();
+		return new MyLinkedListIterator();//可以直接匿名内部类
 	}
 	
-	//内部类用于具体实现适用于本地的遍历
+	//内部类用于具体实现适用于本地的遍历（其实本身next和hasNext方式是可以直接写在本地类中，不过接口定义的越细越好）
 	public class MyLinkedListIterator implements Iterator<T> {
 		int currentSize =0;
 		Node<T> node = head;
