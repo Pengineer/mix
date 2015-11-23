@@ -10,7 +10,7 @@ public class MainClass {
 	
 	public static void dynamicProxyTest() throws Exception {
 		Movable m = new Tank();
-		Movable tlp = (Movable)Proxy.newProxyInstance(Movable.class, new LogHandler(m));
+		Movable tlp = (Movable)Proxy.newProxyInstance(Movable.class, new LogHandler(m)); //这里默认是对接口中的所有方法进行代理
 		tlp.move();
 	}
 }

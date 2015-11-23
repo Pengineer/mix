@@ -12,7 +12,7 @@ import javax.tools.StandardJavaFileManager;
 import javax.tools.ToolProvider;
 
 /**
- * 模拟JDK的Proxy源码：动态编译产生动态代理对象$Proxy
+ * 模拟JDK的Proxy源码：动态编译产生动态代理对象$Proxy1
  *
  */
 public class Proxy {
@@ -35,9 +35,9 @@ public class Proxy {
 		String src = 
 				"package edu.hust.DynamicProxy.update; "                  			+ "\r\n" + 
 				"import java.lang.reflect.Method; "									+ "\r\n" +
-				"public class $Proxy implements " + interf.getName() + " { "  		+ "\r\n" + 
+				"public class $Proxy1 implements " + interf.getName() + " { "  		+ "\r\n" + 
 				"	edu.hust.DynamicProxy.update.InvocationHandler" + " h; "		+ "\r\n" + 
-				"	public $Proxy(InvocationHandler h) { "  			 			+ "\r\n" + 
+				"	public $Proxy1(InvocationHandler h) { "  			 			+ "\r\n" + 
 				"		super(); "                                 					+ "\r\n" + 
 				"		this.h = h; " 										   		+ "\r\n" + 
 				"	} " 										  					+ "\r\n" + 
@@ -45,7 +45,7 @@ public class Proxy {
 				"}";
 		
 		//生成临时源码文件
-		String fileName = "d:/src/edu/hust/DynamicProxy/update/$Proxy.java"; 
+		String fileName = "d:/src/edu/hust/DynamicProxy/update/$Proxy1.java"; 
 		FileWriter fw = new FileWriter(fileName);
 		fw.write(src);
 		fw.close();
@@ -61,7 +61,7 @@ public class Proxy {
 		//加载到内存并生成代理类实例
 		URL[] urls = new URL[] {new URL("file:/" + "d:/src/")};
 		URLClassLoader ucl = new URLClassLoader(urls);
-		Class clazz = ucl.loadClass("edu.hust.DynamicProxy.update.$Proxy"); //注意和上面的package保持一致，路劲其他部分无所谓
+		Class clazz = ucl.loadClass("edu.hust.DynamicProxy.update.$Proxy1"); //注意和上面的package保持一致，路劲其他部分无所谓
 		
 		Constructor con = clazz.getConstructor(InvocationHandler.class);
 		return con.newInstance(h);
