@@ -13,6 +13,8 @@ import javax.tools.ToolProvider;
 
 /**
  * 模拟JDK的Proxy源码：动态编译产生动态代理对象$Proxy1
+ * 
+ * 最底层代码，永不随业务的变化而变化
  *
  */
 public class Proxy {

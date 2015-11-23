@@ -18,12 +18,12 @@ import org.dom4j.io.XMLWriter;
 public class Demo4 {
 
 	public static void main(String[] args) throws Exception {
-	//	read();
+		read();
 	//	readAttr();
 	//	add1();
 	//	add2();
 	//	delete();
-		update();
+//		update();
 	}
 	
 	/*读取指定标签*/
@@ -31,7 +31,8 @@ public class Demo4 {
 		//1，得到SAX读取器
 		SAXReader reader = new SAXReader();
 		//2，得到文档的Document对象
-		Document document = reader.read("src/edu/whut/xml/book.xml");
+//		Document document = reader.read("src/edu/whut/xml/book.xml");
+		Document document = reader.read(Demo4.class.getResourceAsStream("book.xml"));
 		//3，通过根节点获取其他节点（比JAXP复杂一点）
 		Element root = document.getRootElement();
 		Element book = root.elements("书").get(1);
