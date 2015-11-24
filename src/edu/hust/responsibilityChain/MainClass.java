@@ -4,6 +4,8 @@ package edu.hust.responsibilityChain;
  * 责任链模式
  * 
  * strust的过滤器。
+ * 
+ * @author 2015-11-24
  *
  */
 public class MainClass {

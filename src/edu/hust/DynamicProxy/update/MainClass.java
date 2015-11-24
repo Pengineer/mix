@@ -2,6 +2,8 @@ package edu.hust.DynamicProxy.update;
 
 /**
  *	在edu.hust.DynamicProxy中由于代理的方式还是比较固定，它只能做日志代理
+ *
+ *@author 2015-11-23
  */
 public class MainClass {
 	public static void main(String[] args) throws Exception {

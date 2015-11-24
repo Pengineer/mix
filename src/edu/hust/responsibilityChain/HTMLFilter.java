@@ -1,5 +1,8 @@
 package edu.hust.responsibilityChain;
 
+/**
+ * HTML脚本中特殊符号处理 
+ */
 public class HTMLFilter implements Filter {
 
 	@Override

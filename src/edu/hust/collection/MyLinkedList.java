@@ -2,7 +2,11 @@ package edu.hust.collection;
 
 import edu.hust.collection.Collection;
 import edu.hust.collection.Iterable;
-
+/**
+ * iterator容器遍历模式：用Java实现一个LinkedList，可添加可遍历
+ *
+ * @author 2015-11-19
+ */
 public class MyLinkedList<T> implements Collection<T>, Iterable<T> {
 	
 	int size=0;

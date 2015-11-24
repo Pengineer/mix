@@ -2,7 +2,7 @@ package edu.hust.thread;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
-/*
+/**
  * volatile是Java提供的最轻量级同步机制，volatile变量在共享使用时，如果多个线程同时修改变量值，会产生不同步的问题
  * 
  * 2015-11-15

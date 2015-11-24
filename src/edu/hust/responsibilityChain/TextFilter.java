@@ -1,5 +1,8 @@
 package edu.hust.responsibilityChain;
 
+/**
+ * 文字内容处理 
+ */
 public class TextFilter implements Filter {
 
 	@Override

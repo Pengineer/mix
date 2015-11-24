@@ -1,5 +1,10 @@
 package edu.hust.comparable;
 
+/**
+ * 策略模式：comparable & Comparator
+ * @author 2015-11-20
+ *
+ */
 public class ObjectSort {
 	
 	public static void main(String[] args) {

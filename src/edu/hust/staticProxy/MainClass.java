@@ -5,6 +5,8 @@ package edu.hust.staticProxy;
  * Spring框架中有两种动态代理，一种是被代理的类必须实现同一接口，另一种不需要，但是官方推荐使用第一种，即实现接口。
  * 
  * 多态是所有设计模式的核心
+ * 
+ * @author 2015-11-23
  *
  */
 public class MainClass {
