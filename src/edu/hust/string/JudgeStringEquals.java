@@ -11,19 +11,19 @@ package edu.hust.string;
  */
 public class JudgeStringEquals {
 	public static void main(String[] args) {
-		String str1 = "abc";   //通过常量池在编译期创建了一个对象
+		String str1 = "abc";   //通过常量池在编译期创建了一个String对象
 		String str2 = "abc";   //没有创建对象
-		System.out.println(str1 == str2);  //true
-		String str3 = "abc" + "abc";  //通过常量池在编译期创建了一个对象。编译时，JVM直接将其变成“abcabc”
-		String str4 = str1 + str2;   //创建1个主对象和一个sb临时的对象：StringBuilder对象；执行StringBuilder.toString()时创建String对象
+		System.out.println(str1 == str2);  //true，str1和str2存储的都是堆中唯一的那个拘留字符串对象的地址
+		String str3 = "abc" + "abc";  //通过常量池在编译期创建了一个String对象。编译时，JVM直接将其变成“abcabc”
+		String str4 = str1 + str2;   //创建了2个的对象：StringBuilder对象；执行StringBuilder.toString()时创建String对象。如果没有str3，在常量池中不会有“abcabc”
 		String str5 = "a" + "bc";    //没有创建对象
-		String str6 = new String("a") + "bc";  //创建了1 or 2个主对象和一个sb临时对象（如果没有上面的代码，创建两个主对象，因为通过常量池会创建一个拘留字符串对象）
+		String str6 = new String("a") + "bc";  //创建了2对象（如果没有上面的代码，创建3个对象，因为通过常量池会创建一个拘留字符串对象）
 		System.out.println(str3 == str4);  //false
 		System.out.println(str1 == str5);  //true
 		System.out.println(str1 == str6);  //false
-		String s1 = new String("a");    //创建了2个对象
+		String s1 = new String("a");    //创建两个相同字符串值的String对象：一个是拘留字符串对象，一个是new新建的字符串对象
 		String s2 = new String("b");    //创建了2个对象
-		String s3 = new String("a");    //创建了1个对象（因为有s1那一行）
+		String s3 = new String("a");    //创建了1个对象（因为有s1那一行），此时堆中有3个字符串值为“a”的对象
 		System.out.println(s1 == s2);   //false
 		System.out.println(s1 == s3);   //false
 	}
