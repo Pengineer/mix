@@ -1,4 +1,4 @@
-package edu.hust.abstractor;
+package edu.hust.template;
 
 public class IsolateOddEven extends ArrayProcessor {
 

@@ -1,10 +1,10 @@
-package edu.hust.string;
+package edu.hust.basic.string;
 
 /**
  * 预备知识：JVM内存管理
  * 参考：
- * http://blog.csdn.net/clam_clam/article/details/6831345
- * http://hxraid.iteye.com/blog/687660
+ * @see http://blog.csdn.net/clam_clam/article/details/6831345
+ * @see http://hxraid.iteye.com/blog/687660
  * 
  * @author 2015-12-03
  *
