@@ -49,11 +49,11 @@ public class JudgeIntegerEquals {
 		Class cache = Integer.class.getDeclaredClasses()[0];
 		Field myCache = cache.getDeclaredField("cache");
 		myCache.setAccessible(true);
-		Integer[] newCache = (Integer[])myCache.get(cache);
+		Integer[] newCache = (Integer[])myCache.get(cache); //获取反射获取缓存中的cache
 		newCache[132] = newCache[133]; //128 + 4 = 132，即缓存中的第四个对象被第五个对象覆盖
 		int a = 2; //实际执行Integer a = Integer.valueOf(2); 
 		int b = a + a;
-		System.out.println(a + " " + b);
+		System.out.println(a + " + " + a + " = " + b);
 		System.out.printf("%d + %d = %d", a, a, b);
 	}
 }
