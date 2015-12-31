@@ -57,7 +57,7 @@ public class Proxy {
 		//加载到内存并生成代理类实例
 		URL[] urls = new URL[] {new URL("file:/" + "d:/src/")};
 		URLClassLoader ucl = new URLClassLoader(urls);
-		Class clazz = ucl.loadClass("edu.hust.DynamicProxy.$Proxy"); //注意和上面的package保持一致，路劲其他部分无所谓
+		Class clazz = ucl.loadClass("edu.hust.DynamicProxy.$Proxy"); //注意和上面的package保持一致，路径其他部分无所谓
 		
 		Constructor con = clazz.getConstructor(interf);
 		return con.newInstance(new Tank());

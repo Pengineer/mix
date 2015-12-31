@@ -50,10 +50,10 @@ public class JudgeIntegerEquals {
 	}
 	
 	//Integer 与 int 的比较，表面看是引用类型与基本数据类型的比较，其实在JDK1.5之后，比较时Java会自动获取Integer
-	//的值，然后比较两者的值。
+	//的值，然后比较两者的值（也就是说是按照基本数据类型来比较）。
 	public static void test2() {
-		int i = 10;
-		Integer j = new Integer(10);
+		int i = 1000;
+		Integer j = new Integer(1000);
 		System.out.println(i == j); //true
 	}
 	
