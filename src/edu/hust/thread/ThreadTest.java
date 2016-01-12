@@ -32,9 +32,12 @@ public class ThreadTest {
 	                    e.printStackTrace();
 	                }
 	                System.out.println(String.format("thread %d finished", this.hashCode()));
+	                throw new RuntimeException();
 	            }
 	        });
 	    }
+	    
+	    
 	    
 	    executor.shutdown();
 	}
