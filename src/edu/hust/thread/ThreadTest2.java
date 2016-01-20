@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 线程池中捕获异常
- * 1，smdb中的做法：将具体的run方法用try-catch包起来，用Exception异常来接受所有可能的异常。
+ * 1，smdb中的做法：将具体的run方法用try-catch包起来，用Exception异常来接受所有可能的异常。（感觉这并不是一个正常的捕获方式）
  * 2，网上的做法：使用afterExecute()方法收集。
  * 
  * 

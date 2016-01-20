@@ -19,7 +19,7 @@ import javax.tools.ToolProvider;
  */
 public class Proxy {
 	public static Object newProxyInstance(Class interf, InvocationHandler h) throws Exception {
-		//获取接口的所有方法源码
+		//获取并实现接口中的所有方法
 		String methods = "";
 		for (Method method : interf.getMethods()) {
 			methods +=  "	@Override" + "\r\n" +
